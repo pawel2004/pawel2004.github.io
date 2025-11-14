@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Paweł Gryboś">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+    <title>Portfolio - Paweł Gryboś</title>
+
+    <script src="main.js" defer></script>
+</head>
+
+<body class="light">
+    <div class="wrapper">
+        <div class="container">
+            <header>
+                <nav>
+                    <img src="assets/logo.png" alt="Logo">
+
+                    <div>
+                        <button type="button" id="change-theme" class="change-theme-bt"></button>
+                        <button type="button" class="open-menu-bt" id="open-menu"></button>
+                    </div>
+
+                    <ul id="nav-menu" class="nav-menu">
+                        <li><a href="#" class="nav-link">Home</a></li>
+                        <li><a href="#about" class="nav-link">About me</a></li>
+                        <li><a href="#projects" class="nav-link">Projects</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <section id="home">
+                    <img src="assets/baner.png" alt="Baner">
+                    <h1>Welcome to my website</h1>
+                </section>
+                <section id="about">
+                    <h2>About me</h2>
+                    <p style="text-align: justify;">Hi! My name is Paweł. I have graduated from Upper Secondary
+                        Technical School
+                        of Communications in
+                        Cracow
+                        and
+                        now I
+                        am studying Informatics at AGH University of Cracow. I really like web development but
+                        I am also
+                        interested in android applications development and other things related to informatics. Talking
+                        about my
+                        private interests I really like singing :).
+                    </p>
+                </section>
+                <section id="projects">
+                    <h2>My projects</h2>
+                    <div class="gallery">
+                        <a href="https://github.com/pawel2004/SnakeJS" class="video">
+                            <p>
+                                Snake
+                            </p>
+                            <video muted loop autoplay>
+                                <source src="gallery_assets/snakeJS_video.mp4">
+                                Your browser doesn't support video!
+                            </video>
+                        </a>
+                        <a href="https://github.com/pawel2004/SpeedwayJS">
+                            <p>
+                                Speedway
+                            </p>
+                            <img src="gallery_assets/speedwayJS.png" alt="Image of SpeedwayJS project">
+                        </a>
+                        <a href="https://github.com/pawel2004/Flashcards">
+                            <p>Flashcards</p>
+                            <img src="gallery_assets/flashcards.png" alt="Image of Flashcards project">
+                        </a>
+                        <a href="https://github.com/pawel2004/CinemaSystemPHP">
+                            <p>Simple cinema system</p>
+                            <img src="gallery_assets/cinemaSystem.png" alt="Image of Flashcards project">
+                        </a>
+                    </div>
+                </section>
+                <section id="contact">
+                    <h2>Contact me</h2>
+                    <p>This form will take you to your email application.</p>
+                    <form action="mailto:pawelgr7@gmail.com" method="post" enctype="text/plain">
+                        <input type="email" placeholder="Email (paul@example.com)" name="email" required>
+                        <select name="topic" required>
+                            <option value="question">Question</option>
+                            <option value="business-proposal">Business proposal</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <textarea name="message" placeholder="Enter your message here"></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                    <h3>Useful links</h3>
+                    <div class="link-container">
+                        <a href="mailto:pawelgr7@gmail.com" id="mail-logo"></a>
+                        <a href="https://github.com/pawel2004" id="github-logo"></a>
+                        <a href="https://www.linkedin.com/in/paweł-gryboś-554b282a5" id="linkedin-logo"></a>
+                    </div>
+                </section>
+            </main>
+            <footer>&copy; Paweł Gryboś 2025</footer>
+        </div>
+    </div>
+</body>
+
+</html>

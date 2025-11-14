@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  max-width: 1024px;
+}
+
+.container > * {
+  width: 100%;
+  padding: 8px;
+}
+
+.nav-visible {
+  height: 156px;
+  min-height: 156px;
+  visibility: visible;
+}
+
+h1,
+h2,
+h3,
+#contact form {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+header {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+header nav {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+header nav div {
+  padding-left: 8px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+header nav div .open-menu-bt,
+header nav div .change-theme-bt {
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  transition: all 0.25s;
+}
+header nav div .open-menu-bt {
+  background-image: url("assets/menu_icon_light.svg");
+}
+header nav div .change-theme-bt {
+  background-image: url("assets/light_mode.svg");
+}
+header nav ul {
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: stretch;
+  list-style-type: none;
+  visibility: hidden;
+  overflow: hidden;
+  height: 0px;
+  min-height: 0px;
+  transition: height 0.5s, min-height 0.5s, visibility 0.5s;
+}
+header nav a {
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  display: block;
+  padding: 8px;
+  transition: all 0.25s;
+}
+
+#home {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+#home h1 {
+  text-align: center;
+}
+#home img {
+  display: block;
+  width: 100%;
+}
+
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 16px;
+  justify-content: center;
+}
+.gallery a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 304px;
+  height: 228px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: all 0.25s;
+}
+.gallery a p {
+  position: absolute;
+  width: 100%;
+  height: 32px;
+  padding: 8px;
+  bottom: 0px;
+}
+.gallery a img,
+.gallery a video {
+  display: block;
+  width: 100%;
+}
+.gallery a:hover {
+  transform: translate(-5px, -5px);
+}
+
+#contact form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+#contact form textarea {
+  resize: none;
+}
+
+#contact form * {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+#contact form button {
+  font-weight: bold;
+  transition: all 0.25s;
+}
+
+#contact form textarea {
+  height: 400px;
+}
+
+#contact .link-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 16px;
+}
+#contact .link-container a {
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#contact .link-container #github-logo {
+  background-image: url("assets/github_mark_white.svg");
+}
+#contact .link-container #mail-logo {
+  background-image: url("assets/mail_light.svg");
+}
+#contact .link-container #linkedin-logo {
+  background-image: url("assets/LI_In_logo.png");
+}
+
+@media only screen and (min-width: 768px) {
+  header nav div {
+    order: 2;
+  }
+  header nav div .open-menu-bt {
+    display: none;
+  }
+  header nav ul {
+    flex: 3;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    visibility: visible;
+    max-height: max-content;
+    height: max-content;
+    padding: 0;
+  }
+}
+main section {
+  scroll-margin-top: 56px;
+}
+
+footer {
+  text-align: center;
+}
+
+.light .wrapper {
+  background-color: #fff;
+  color: #000;
+}
+.light header {
+  background-color: #fff;
+}
+.light .nav-link {
+  color: #000;
+}
+.light .nav-link:hover {
+  background-color: #b2f080;
+}
+.light .nav-link:active {
+  background-color: #65e000;
+}
+.light .open-menu-bt {
+  background-color: #fff;
+}
+.light .open-menu-bt:hover {
+  background-color: #b2f080;
+}
+.light .open-menu-bt:active {
+  background-color: #65e000;
+}
+.light .nav-menu {
+  background-color: #fff;
+}
+.light .change-theme-bt {
+  background-color: #fff;
+}
+.light .change-theme-bt:hover {
+  background-color: #b2f080;
+}
+.light .change-theme-bt:active {
+  background-color: #65e000;
+}
+.light .gallery a {
+  box-shadow: 5px 5px #b2f080;
+}
+.light .gallery a:hover {
+  box-shadow: 10px 10px #65e000;
+}
+.light .gallery a:hover p {
+  background-color: rgba(101, 224, 0, 0.75);
+  color: #000;
+}
+.light .gallery a p {
+  background-color: rgba(178, 240, 128, 0.75);
+  color: #000;
+}
+.light #contact form * {
+  border: 2px solid #b2f080;
+}
+.light #contact form button {
+  color: #000;
+  background-color: #fff;
+}
+.light #contact form button:hover {
+  background-color: #b2f080;
+}
+.light #contact form button:active {
+  background-color: #65e000;
+}
+
+.dark .wrapper {
+  background-color: #2c2c2c;
+  color: #fff;
+}
+.dark header {
+  background-color: #2c2c2c;
+}
+.dark .nav-link {
+  color: #fff;
+}
+.dark .nav-link:hover {
+  background-color: #377a00;
+}
+.dark .nav-link:active {
+  background-color: #325316;
+}
+.dark .open-menu-bt {
+  background-color: #2c2c2c;
+}
+.dark .open-menu-bt:hover {
+  background-color: #377a00;
+}
+.dark .open-menu-bt:active {
+  background-color: #325316;
+}
+.dark .nav-menu {
+  background-color: #2c2c2c;
+}
+.dark .change-theme-bt {
+  background-color: #2c2c2c;
+}
+.dark .change-theme-bt:hover {
+  background-color: #377a00;
+}
+.dark .change-theme-bt:active {
+  background-color: #325316;
+}
+.dark .gallery a {
+  box-shadow: 5px 5px #377a00;
+}
+.dark .gallery a:hover {
+  box-shadow: 10px 10px #325316;
+}
+.dark .gallery a:hover p {
+  background-color: rgba(50, 83, 22, 0.75);
+  color: #fff;
+}
+.dark .gallery a p {
+  background-color: rgba(55, 122, 0, 0.75);
+  color: #fff;
+}
+.dark #contact form * {
+  border: 2px solid #377a00;
+}
+.dark #contact form button {
+  color: #fff;
+  background-color: #2c2c2c;
+}
+.dark #contact form button:hover {
+  background-color: #377a00;
+}
+.dark #contact form button:active {
+  background-color: #325316;
+}
+
+/*# sourceMappingURL=main.css.map */
